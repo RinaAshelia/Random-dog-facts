@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Doggy facts App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">doggy facts</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <div *ngIf="(dogImageUrl$ | async) as dogImageUrl">
+      <img [src]="dogImageUrl" alt="random image of dog"/>
+    </div>
+    <ion-card-header>
+      <ion-card-title>Amazing facts about dogs</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content *ngIf="(dogFact$ | async) as dogFact">
+      <p>{{ dogFact.attributes.body }}</p>
+
+      <ion-button (click)="nextFact()">next fact</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

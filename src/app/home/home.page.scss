@@ -1,0 +1,43 @@
+#container {
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+ion-content {
+  display: flex;
+  --background: url(../../assets/dog_and_cat_pattern-11.jpg) 0 0/100% 100% no-repeat;
+}
+
+
+ion-card {
+  ion-card-content {
+    align-items: center !important;
+    ion-button {
+      text-align: center;
+      --background: #c37f36;
+      --background-hover: #c37f36 -50%;
+    }
+  }
+ }
+
